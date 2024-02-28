@@ -9,11 +9,11 @@ This document provides instructions on how to interact with the random number ge
 ### Requesting Data
 To request a random number, we just need to make sure that in the Txt file, there is the number n inside where n stands for the range. 
 
-file = open('prng-service.txt', 'r+')
+    file = open('prng-service.txt', 'r+')
 
-read_file = file.readline()
+    read_file = file.readline()
 
-if read_file.isdigit():
+    if read_file.isdigit():
 
     time.sleep(5)
     
@@ -24,20 +24,20 @@ if read_file.isdigit():
 To receive data, we read the content from that same "prng-service.txt" after 5 seconds.
 
 
-randNum1 = random.randint(1, upperLimitNum)
+    randNum1 = random.randint(1, upperLimitNum)
 
-randNum2 = random.randint(1, upperLimitNum)
+    randNum2 = random.randint(1, upperLimitNum)
 
-randNum3 = random.randint(1, upperLimitNum)
+    randNum3 = random.randint(1, upperLimitNum)
 
-randNumTple = (randNum1, randNum2, randNum3)
+    randNumTple = (randNum1, randNum2, randNum3)
     
-returnWord = "ok" + str(randNumTple)
+    returnWord = "ok" + str(randNumTple)
     
-file.seek(0)
+    file.seek(0)
     
-file.truncate()
+    file.truncate()
     
-file.write(returnWord)
+    file.write(returnWord)
 
 """
